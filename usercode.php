@@ -5,7 +5,7 @@ use Aws\S3\S3Client;
 require_once __DIR__.'/vendor/autoload.php';
 
 function handle($data) {
-    $s3 = createS3($data['s3']['key'], $data['s3']['secret']);
+    $s3 = createS3($data['s3_key'], $data['s3_secret']);
 
     $data['result'] = $s3->putObject([
         'Content-Type'      => 'text/plain',
